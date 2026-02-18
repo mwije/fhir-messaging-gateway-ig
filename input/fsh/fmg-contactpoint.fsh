@@ -1,7 +1,7 @@
 //gatewaycontactpoint.fsh
-Profile: GatewayContactPoint
+Profile: FMGMessagingContactPoint
 Parent: ContactPoint
-Id: gateway-contactpoint
+Id: fmg-contactpoint
 Description: "ContactPoint with required messaging channel extension when system = other"
 
 * extension contains MessagingChannelExtension named messagingChannel 0..1
