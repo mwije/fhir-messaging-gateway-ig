@@ -8,7 +8,6 @@ Description: "Messages to be delivered"
 * recipient 1..*
 * recipient.identifier 1..1
 * recipient.reference 0..0
-* intent = #order (exactly)
 * occurrence[x] only dateTime
 * occurrenceDateTime 1..1
 * status 1..1
