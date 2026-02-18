@@ -11,7 +11,7 @@ Description: "Messages received"
 * sender.reference 0..1
 * sender obeys ref-identifier-or-literal
 
-* status = #completed (exactly)
+* status = #completed or #entered-in-error (exactly)
 * received 1..1
 * recipient 1..*
 * recipient.identifier 0..1 MS

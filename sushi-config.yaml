@@ -14,7 +14,7 @@ description: >
   for outbound message orchestration.
 status: draft # draft | active | retired | unknown
 experimental: true
-version: 0.1.3
+version: 0.1.4
 fhirVersion: 4.0.1 # https://www.hl7.org/fhir/valueset-FHIR-version.html
 copyrightYear: 2026+
 releaseLabel: ci-build
@@ -82,8 +82,6 @@ publisher:
 menu:
   Home: index.html
   Architecture: architecture.html
-  Inbound Messages: inbound.html
-  Outbound Messages: outbound.html
   Examples: examples.html
   Artifacts: artifacts.html
 
