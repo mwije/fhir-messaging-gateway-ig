@@ -1,4 +1,4 @@
-#gatewaycontactpoint.fsh
+//gatewaycontactpoint.fsh
 Profile: GatewayContactPoint
 Parent: ContactPoint
 Id: gateway-contactpoint
