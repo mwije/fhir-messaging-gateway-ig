@@ -1,5 +1,36 @@
-# messaging-gateway-ig
+# FHIR Messaging Gateway Implementation Guide
 
-“This implementation does not create outbound Communication resources. Delivery state is represented via status transitions on OutboundCommunication (CommunicationRequest profile).”
+## Overview
 
-The gateway resolves recipient primarily via business identifiers. Literal references are supported for intra-transaction resolution.
+This Implementation Guide defines a FHIR-based messaging gateway architecture 
+for structured inbound and outbound message exchange.
+
+The gateway distinguishes between:
+
+- **InboundMessage** (Profile of Communication)
+- **OutboundMessageRequest** (Profile of CommunicationRequest)
+
+The design intentionally separates:
+- Messages received by the gateway
+- Messages to be delivered externally
+
+## Architectural Principles
+
+- Inbound messages are immutable records.
+- Outbound messages are request-driven orchestration artifacts.
+- Attachments are used as the message payload mechanism.
+
+## Scope
+
+This guide focuses exclusively on:
+- Message transport modeling
+- Payload handling
+- Delivery tracking
+
+It does not define:
+- Clinical workflows
+- Domain-specific content models
+
+## Status
+
+Draft (CI Build)

@@ -9,7 +9,7 @@ Description: "ContactPoint with required messaging channel extension when system
 
 
 Invariant: gp-1
-Description: "If system is 'other', messagingChannel extension must be present"
-Expression: "system = 'other' implies extension.exists(url = 'http://mwije.github.io/messaging-gateway-ig/StructureDefinition/messaging-channel-extension')"
+Description: "If system is 'other', fmg-channel-extension must be present"
+Expression: "system = 'other' implies extension.exists(url = 'http://mwije.github.io/messaging-gateway-ig/StructureDefinition/fmg-channel-extension')"
 Severity: #error
 

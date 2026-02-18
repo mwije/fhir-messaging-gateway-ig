@@ -1,5 +1,5 @@
 Profile: FMGMessagingPatient
 Parent: Patient
-Id: gateway-patient
+Id: fmg-patient
 
 * telecom only FMGMessagingContactPoint

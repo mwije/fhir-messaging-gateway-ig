@@ -3,18 +3,23 @@
 # │  used properties are included. For a list of all supported properties and their functions,     │
 # │  see: https://fshschool.org/docs/sushi/configuration/.                                         │
 # ╰────────────────────────────────────────────────────────────────────────────────────────────────╯
-id: io.github.mwije.fhir.msg.gateway
+id: io.github.mwije.fhir.messaging-gateway
+packageId: io.github.mwije.fhir.messaging-gateway
 canonical: https://mwije.github.io/fhir-messaging-gateway-ig
-name: fhir-messaging-gateway-ig
-# title: Example Title
-# description: Example Implementation Guide for getting started with SUSHI
+name: FHIRMessagingGatewayIG
+title: FHIR Messaging Gateway Implementation Guide
+description: >
+  This Implementation Guide defines a FHIR-based messaging gateway model 
+  using Communication for inbound messages and CommunicationRequest 
+  for outbound message orchestration.
 status: draft # draft | active | retired | unknown
+experimental: true
 version: 0.1.3
 fhirVersion: 4.0.1 # https://www.hl7.org/fhir/valueset-FHIR-version.html
 copyrightYear: 2026+
 releaseLabel: ci-build
 # license: CC0-1.0 # https://www.hl7.org/fhir/valueset-spdx-license.html
-# jurisdiction: urn:iso:std:iso:3166#US "United States of America" # https://www.hl7.org/fhir/valueset-jurisdiction.html
+jurisdiction: urn:iso:std:iso:3166#001 "World"
 publisher:
   name: Malinda Wijeratne
   url: https://github.com/mwije
@@ -76,6 +81,10 @@ publisher:
 # ╰────────────────────────────────────────────────────────────────────────────────────────────────╯
 menu:
   Home: index.html
+  Architecture: architecture.html
+  Inbound Messages: inbound.html
+  Outbound Messages: outbound.html
+  Examples: examples.html
   Artifacts: artifacts.html
 
 # ╭───────────────────────────Less Common Implementation Guide Properties──────────────────────────╮
@@ -102,9 +111,9 @@ menu:
 # of profile URLs. If a value is an id or name, SUSHI will replace
 # it with the correct canonical when generating the IG JSON.
 #
-# global:
-#   Patient: http://example.org/fhir/StructureDefinition/my-patient-profile
-#   Encounter: http://example.org/fhir/StructureDefinition/my-encounter-profile
+global:
+  Communication: FMGInboundCommunication
+  CommunicationRequest: FMGOutboundCommunicationRequest
 #
 #
 # The resources property corresponds to IG.definition.resource.
