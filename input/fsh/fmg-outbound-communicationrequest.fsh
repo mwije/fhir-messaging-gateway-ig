@@ -1,4 +1,4 @@
-//communicationrequest.fsh
+
 Profile: FMGOutboundCommunicationRequest
 Parent: CommunicationRequest
 Description: "Messages to be delivered"

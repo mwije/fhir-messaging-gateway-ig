@@ -1,4 +1,4 @@
-//communicationbundle.fsh
+
 Profile: FMGOutboundTransactionBundle
 Parent: Bundle
 Id : fmg-order-bundle

@@ -1,4 +1,4 @@
-//messagingchannel.fsh
+
 CodeSystem: FMGMessagingChannelCS
 Id: fmg-channel
 Title: "Messaging Channel"

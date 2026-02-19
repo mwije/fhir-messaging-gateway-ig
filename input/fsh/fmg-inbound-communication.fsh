@@ -1,4 +1,4 @@
-//communication.fsh
+
 Profile: FMGInboundCommunication
 Parent: Communication
 Description: "Messages received"

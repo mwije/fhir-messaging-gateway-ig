@@ -1,4 +1,4 @@
-//gatewaycontactpoint.fsh
+
 Profile: FMGMessagingContactPoint
 Parent: ContactPoint
 Id: fmg-contactpoint
