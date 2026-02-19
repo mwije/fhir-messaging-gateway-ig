@@ -1,26 +1,26 @@
-# FHIR Messaging Gateway Implementation Guide
+## FHIR Messaging Gateway Implementation Guide
 
-## Overview
+### Overview
 
 This Implementation Guide defines a FHIR-based messaging gateway architecture 
 for structured inbound and outbound message exchange.
 
 The gateway distinguishes between:
 
-- **InboundMessage** (Profile of Communication)
-- **OutboundMessageRequest** (Profile of CommunicationRequest)
+- **[InboundMessage]({{StructureDefinition['FMGInboundCommunication'].url}})** (Profile of Communication)
+- **[OutboundMessageRequest]({{StructureDefinition['FMGOutboundCommunicationRequest'].url}})** (Profile of CommunicationRequest)
 
 The design intentionally separates:
 - Messages received by the gateway
 - Messages to be delivered externally
 
-## Architectural Principles
+### Architectural Principles
 
 - Inbound messages are immutable records.
 - Outbound messages are request-driven orchestration artifacts.
 - Attachments are used as the message payload mechanism.
 
-## Scope
+### Scope
 
 This guide focuses exclusively on:
 - Message transport modeling
@@ -31,6 +31,6 @@ It does not define:
 - Clinical workflows
 - Domain-specific content models
 
-## Status
+### Status
 
 Draft (CI Build)
