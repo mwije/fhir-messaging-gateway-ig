@@ -82,7 +82,6 @@ publisher:
 menu:
   Home: index.html
   Architecture: architecture.html
-  Examples: examples.html
   Artifacts: artifacts.html
 
 # ╭───────────────────────────Less Common Implementation Guide Properties──────────────────────────╮

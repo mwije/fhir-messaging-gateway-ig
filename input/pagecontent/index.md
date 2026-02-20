@@ -7,8 +7,8 @@ for structured inbound and outbound message exchange.
 
 The gateway distinguishes between:
 
-- **[InboundMessage]({{StructureDefinition['FMGInboundCommunication'].url}})** (Profile of Communication)
-- **[OutboundMessageRequest]({{StructureDefinition['FMGOutboundCommunicationRequest'].url}})** (Profile of CommunicationRequest)
+- **[InboundMessage]({{site.data.fhir.path}} + 'StructureDefinition-FMGInboundCommunication.html')** (Profile of Communication)
+- **[OutboundMessageRequest]({{site.data.fhir.path}} + 'StructureDefinition-FMGOutboundCommunicationRequest.html')** (Profile of CommunicationRequest)
 
 The design intentionally separates:
 - Messages received by the gateway
