@@ -1,9 +1,13 @@
 # FMG FHIR Messaging Gateway IG
 
-![Build](https://github.com/mwije/fhir-messaging-gateway-ig/actions/workflows/build.yml/badge.svg)
 ![FHIR R4](https://img.shields.io/badge/FHIR-R4-blue)
-![FHIR R5](https://img.shields.io/badge/FHIR-R5-lightblue)
-![FHIR R6](https://img.shields.io/badge/FHIR-R6-lightgrey)
+![FHIR R5 Compatible](https://img.shields.io/badge/FHIR-R5-lightblue)
+![FHIR R6 Compatible](https://img.shields.io/badge/FHIR-R6-lightgrey)
+![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)
+
+[![Pages](https://img.shields.io/badge/View-Implementation%20Guide-blue)](https://mwije.github.io/fhir-messaging-gateway-ig/)
+![IG Status](https://img.shields.io/badge/IG%20Status-Draft-lightgrey)
+![IG Build & Validation](https://github.com/mwije/fhir-messaging-gateway-ig/actions/workflows/build.yml/badge.svg)
 
 ## Overview
 
@@ -12,8 +16,8 @@ for structured inbound and outbound message exchange.
 
 The gateway distinguishes between:
 
-- **[InboundMessage](docs/StructureDefinition-FMGInboundCommunication.html)** (Profile of Communication)
-- **[OutboundMessageRequest](docs/StructureDefinition-FMGOutboundCommunicationRequest.html)** (Profile of CommunicationRequest)
+- **[InboundMessage](StructureDefinition-FMGInboundCommunication.html)** (Profile of Communication)
+- **[OutboundMessageRequest](StructureDefinition-FMGOutboundCommunicationRequest.html)** (Profile of CommunicationRequest)
 
 The design intentionally separates:
 
@@ -39,15 +43,11 @@ It does **not** define:
 - Clinical workflows
 - Domain-specific content models
 
-## Status
-
-Draft (validated via CI build)
 
 ## FHIR Version Compatibility
 
 Authored against **FHIR R4 (4.0.1)** and intentionally designed to remain compatible with **R4B, R5, and R6**. Validation is performed against FHIR R4.
 
----
 
 ## Build & Validation
 
@@ -63,7 +63,6 @@ You can trigger the workflow by pushing changes to the `main` branch. The **Buil
 
 > Note: Only source files (`*.fsh`, `*.md`, examples) should be edited. Generated output is handled automatically.
 
----
 
 ## Profiles Overview
 
@@ -72,7 +71,6 @@ You can trigger the workflow by pushing changes to the `main` branch. The **Buil
 | InboundMessage | Communication | Represents messages received by the gateway |
 | OutboundMessageRequest | CommunicationRequest | Represents outbound delivery requests |
 
----
 
 ## Contributing
 
@@ -84,7 +82,6 @@ Contributions are welcome via pull requests. Please:
 
 The **published IG** is automatically generated from the source files and updated via GitHub Pages.
 
----
 
 ## License
 
@@ -93,7 +90,6 @@ This project is licensed under **[MIT License](LICENSE)**:
 - You are free to **share, adapt, and reuse** the content
 - Please credit the original repository and author
 
----
 
 ## Resources & Tools
 
@@ -101,9 +97,3 @@ This project is licensed under **[MIT License](LICENSE)**:
 - [FHIR IG Publisher](https://github.com/HL7/fhir-ig-publisher) – Validation and IG generation
 - [IG Template Guidance](https://build.fhir.org/ig/FHIR/ig-guidance/using-templates.html) – HL7 FHIR templating guidance
 
----
-
-## Published IG
-
-The latest published version of this IG is available at:  
-[https://mwije.github.io/fhir-messaging-gateway-ig/](https://mwije.github.io/fhir-messaging-gateway-ig/)
