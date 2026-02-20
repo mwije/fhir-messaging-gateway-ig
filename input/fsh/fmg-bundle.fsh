@@ -2,7 +2,7 @@
 Profile: FMGOutboundTransactionBundle
 Parent: Bundle
 Id : fmg-order-bundle
-Description: "Messages to be delivered"
+Description: "Outgoing Message Bundle"
 * type = #transaction (exactly)
 * entry ^slicing.discriminator.type = #type
 * entry ^slicing.discriminator.path = "resource"

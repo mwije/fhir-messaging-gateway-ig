@@ -1,7 +1,7 @@
 
 Profile: FMGOutboundCommunicationRequest
 Parent: CommunicationRequest
-Description: "Messages to be delivered"
+Description: "Outgoing Message"
 * priority 1..1 SU
 * payload 1..*
   * content[x] only Attachment

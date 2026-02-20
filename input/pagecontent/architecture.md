@@ -1,5 +1,3 @@
-## Architecture
-
 ### Overview
 
 The gateway distinguishes between two distinct message directions:

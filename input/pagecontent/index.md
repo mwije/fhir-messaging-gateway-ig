@@ -32,3 +32,7 @@ It does not define:
 ### Status
 
 Draft (CI Build)
+
+### FHIR Version Compatibility
+
+This Implementation Guide is authored against **FHIR R4 (4.0.1)** and is intentionally designed to remain compatible with R4B, R5, and R6 where structural alignment is maintained. Validation for this publication is performed against FHIR R4.

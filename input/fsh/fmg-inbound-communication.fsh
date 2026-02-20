@@ -1,7 +1,7 @@
 
 Profile: FMGInboundCommunication
 Parent: Communication
-Description: "Messages received"
+Description: "Incoming Message"
 * priority 1..1 SU
 * payload 1..*
 * payload.content[x] only Attachment
