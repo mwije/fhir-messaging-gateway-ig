@@ -1,13 +1,12 @@
 # FMG FHIR Messaging Gateway IG
 
-![FHIR R4](https://img.shields.io/badge/FHIR-R4-blue)
-![FHIR R5 Compatible](https://img.shields.io/badge/FHIR-R5-lightblue)
-![FHIR R6 Compatible](https://img.shields.io/badge/FHIR-R6-lightgrey)
+[![FHIR R4](https://img.shields.io/badge/FHIR-R4-blue)](https://hl7.org/fhir/R4/)
+[![FHIR R5 Compatible](https://img.shields.io/badge/FHIR-R5%20Compatible-lightblue)](https://hl7.org/fhir/R5/)
 ![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)
 
-[![Pages](https://img.shields.io/badge/View-Implementation%20Guide-blue)](https://mwije.github.io/fhir-messaging-gateway-ig/)
-![IG Status](https://img.shields.io/badge/IG%20Status-Draft-lightgrey)
-![IG Build & Validation](https://github.com/mwije/fhir-messaging-gateway-ig/actions/workflows/build.yml/badge.svg)
+[![Pages](https://img.shields.io/badge/View-Implementation%20Guide-blue)
+![IG Status](https://img.shields.io/badge/IG%20Status-Draft-lightgrey)](https://mwije.github.io/fhir-messaging-gateway-ig/)
+[![IG Build & Validation](https://github.com/mwije/fhir-messaging-gateway-ig/actions/workflows/build.yml/badge.svg)](actions)
 
 ## Overview
 
@@ -16,8 +15,8 @@ for structured inbound and outbound message exchange.
 
 The gateway distinguishes between:
 
-- **[InboundMessage](StructureDefinition-FMGInboundCommunication.html)** (Profile of Communication)
-- **[OutboundMessageRequest](StructureDefinition-FMGOutboundCommunicationRequest.html)** (Profile of CommunicationRequest)
+- **[InboundMessage](https://mwije.github.io/fhir-messaging-gateway-ig/StructureDefinition-FMGInboundCommunication.html)** (Profile of Communication)
+- **[OutboundMessageRequest](https://mwije.github.io/fhir-messaging-gateway-ig/StructureDefinition-FMGOutboundCommunicationRequest.html)** (Profile of CommunicationRequest)
 
 The design intentionally separates:
 
