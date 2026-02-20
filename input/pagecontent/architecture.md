@@ -147,7 +147,7 @@ Modern messaging gateways often require support for additional platforms (e.g., 
 
 Rather than redefining or extending the core `ContactPointSystem` terminology, this guide introduces a governed messaging channel taxonomy:
 
-- A dedicated CodeSystem **[FMGMessagingChannel]**(StructureDefinition-FMGMessagingChannel.html)
+- A dedicated CodeSystem **[FMGMessagingChannel](StructureDefinition-FMGMessagingChannel.html)**
 - A required ValueSet binding applied conditionally when extending beyond the standard [ContactPointSystem]({{site.data.fhir.path | append: 'valueset-contact-point-system.html' }}) value set
 - A contextual extension to qualify non-standard transport channels
 

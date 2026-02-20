@@ -15,6 +15,7 @@ Reception and delivery are modeled separately to preserve semantic clarity, trac
 - Outbound messages represent explicit delivery intent.
 - Payloads are conveyed using attachments to preserve transport neutrality.
 - Transport channels are extensible beyond the base FHIR `ContactPoint` value set through governed terminology and invariant enforcement.
+- Transport channels are extensible via the **[FMGMessagingContactPoint](StructureDefinition-FMGMessagingContactPoint.html)** profile, which enforces explicit identification of non-standard messaging platforms (like WhatsApp) when `ContactPoint.system = other`.
 
 ### Scope
 
