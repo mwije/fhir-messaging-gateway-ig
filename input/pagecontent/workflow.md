@@ -34,7 +34,7 @@ The gateway distinguishes between two identifier types:
 
 - POST (create) requests **SHALL NOT** include resource IDs in the URL
 - PUT (update) and DELETE requests **SHALL** include the resource ID in the URL
-- The gateway assigns resource IDs; clients must not assume or pre-assign them
+- The gateway assigns resource IDs; clients **SHALL NOT** assume or pre-assign them
 
 ---
 
@@ -67,16 +67,16 @@ GET /Communication?recipient.identifier=http://example.org/client-id|xxxx&_lastu
 The gateway **SHALL** enforce access control on **all** operations:
 
 **Query Operations (GET):**
-- Clients may only query resources where `recipient` or `sender` matches their authorized identity
+- Clients **MAY** only query resources where `recipient` or `sender` matches their authorized identity
 - Business identifiers **MUST** be validated against the client's claims
 - Resource IDs alone are insufficient for authorization
 
 **Create Operations (POST):**
-- Clients may only create resources within their authorized scope
+- Clients **MAY** only create resources within their authorized scope
 - Recipient business identifiers **MUST** be validated against the client's claims
 
 **Update Operations (PUT):**
-- Clients may only update resources they are authorized to access
+- Clients **MAY** only update resources they are authorized to access
 - The gateway **SHALL** verify the client has rights to modify the specific resource
 - Updates are only permitted when the resource is not in a terminal state
 
@@ -87,7 +87,7 @@ The gateway **SHALL** enforce access control on **all** operations:
 **Delete Operations (DELETE):**
 - Clients may only delete resources they are authorized to access
 
-> **Security Note:** Authorization is enforced server-side. Clients cannot bypass restrictions by omitting filters. The gateway must reject unauthorized requests with appropriate error codes (403 Forbidden).
+> **Security Note:** Authorization is enforced server-side. Clients cannot bypass restrictions by omitting filters. The gateway **MUST** reject unauthorized requests with appropriate error codes (403 Forbidden).
 
 ---
 
@@ -275,10 +275,10 @@ The gateway implements defense-in-depth across all operations:
 
 1. **Authentication** - All endpoints require valid authentication (OAuth2, API key, mutual TLS, etc.)
 2. **Authorization** - The gateway enforces scope on **all** HTTP methods:
-   - **GET**: Clients may only read resources scoped to their authorized identity
-   - **POST**: Clients may only create resources within their authorized scope
-   - **PUT/PATCH**: Clients may only update resources they are authorized to access, and only when not in a terminal state
-   - **DELETE**: Clients may only delete resources they are authorized to access
+   - **GET**: Clients **MAY** only read resources scoped to their authorized identity
+   - **POST**: Clients **MAY** only create resources within their authorized scope
+   - **PUT/PATCH**: Clients **MAY** only update resources they are authorized to access, and only when not in a terminal state
+   - **DELETE**: Clients **MAY** only delete resources they are authorized to access
 3. **Transport** - All traffic over TLS/HTTPS (mutual TLS recommended)
 4. **Input Validation** - All inbound content validated before persistence
 5. **Audit Logging** - All operations logged with client identity, timestamp, and action

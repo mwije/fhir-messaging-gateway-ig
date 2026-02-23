@@ -16,9 +16,9 @@ Reception and delivery are modeled separately to preserve semantic clarity, trac
 - Payloads are conveyed using attachments to preserve transport neutrality.
 - Transport channels are extensible beyond the base FHIR `ContactPoint` value set through governed terminology.
 
-  When `ContactPoint.system = other`, the **[FMGMessagingChannelExtension](StructureDefinition-FMGMessagingChannelExtension.html)** extension **must** be present to identify the non-standard platform (e.g., WhatsApp, Telegram, Signal) and is bound to the **[FMGMessagingChannelVS](ValueSet-FMGMessagingChannelVS.html)** ValueSet.
+  When `ContactPoint.system = other`, the **[FMGMessagingChannelExtension](StructureDefinition-FMGMessagingChannelExtension.html)** extension **MUST** be present to identify the non-standard platform (e.g., WhatsApp, Telegram, Signal) and is bound to the **[FMGMessagingChannelVS](ValueSet-FMGMessagingChannelVS.html)** ValueSet.
 
-  If `ContactPoint.system` uses a standard value, the extension may be present but is **ignored** for routing; the `system` itself determines the channel.
+  If `ContactPoint.system` uses a standard value, the extension **MAY** be present but is **ignored** for routing; the `system` itself determines the channel.
 
   Legacy v3 ParticipationMode codes and standard ContactPoint.system codes are mapped to FMG messaging channels via ConceptMaps to enable consistent routing and interoperability.
 

@@ -10,7 +10,7 @@ The extension contains two sub-extensions:
 
 | Sub-Extension | Required | Purpose |
 |--------------|----------|---------|
-| `channelSelectionPolicy` | Yes | Controls whether requested channels must be used or substitution is allowed |
+| `channelSelectionPolicy` | Yes | Controls whether requested channels **MUST** be used or substitution is allowed |
 | `deliveryMode` | Yes | Controls how compatible channels are attempted |
 
 ---
@@ -20,7 +20,7 @@ The extension contains two sub-extensions:
 | Code | Description |
 |------|-------------|
 | `requested-only` | Only channels explicitly listed in `medium` are eligible. If none are available, delivery fails. |
-| `allow-substitution` | Gateway may select alternative compatible channels if requested channels are unavailable. |
+| `allow-substitution` | Gateway **MAY** select alternative compatible channels if requested channels are unavailable. |
 
 ---
 

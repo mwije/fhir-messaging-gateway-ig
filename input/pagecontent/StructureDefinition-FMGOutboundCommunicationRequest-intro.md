@@ -40,7 +40,7 @@ See the [Workflow](workflow.html) page for detailed status transition diagrams.
 
 This profile includes the **[FMGDeliveryPolicy](StructureDefinition-FMGDeliveryPolicy.html)** extension which controls delivery orchestration behavior:
 
-- `channelSelectionPolicy` - Whether requested channels must be used or substitution is allowed
+- `channelSelectionPolicy` - Whether requested channels **MUST** be used or substitution is allowed
 - `deliveryMode` - How compatible channels are attempted (single, sequential, multicast)
 
 See the [Terminology](terminology.html) page for detailed delivery policy semantics.

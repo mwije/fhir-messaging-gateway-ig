@@ -90,7 +90,7 @@ This extension is attached to `CommunicationRequest` and contains two sub-extens
 
 | Sub-Extension | Purpose |
 |--------------|---------|
-| `channelSelectionPolicy` | Controls whether requested channels must be used or substitution is allowed |
+| `channelSelectionPolicy` | Controls whether requested channels **MUST** be used or substitution is allowed |
 | `deliveryMode` | Controls how compatible channels are attempted |
 
 #### Channel Selection Policy
@@ -100,7 +100,7 @@ The **[FMGChannelSelectionPolicyVS](ValueSet-FMGChannelSelectionPolicyVS.html)**
 | Code | Description |
 |------|-------------|
 | `requested-only` | Only requested channels are eligible. If unavailable, delivery fails. |
-| `allow-substitution` | Gateway may select alternative compatible channels if requested are unavailable. |
+| `allow-substitution` | Gateway **MAY** select alternative compatible channels if requested are unavailable. |
 
 #### Delivery Mode
 
