@@ -1,6 +1,7 @@
 
 Profile: FMGMessagingContactPoint
 Id: FMGMessagingContactPoint
+Title: "Messaging ContactPoint"
 Parent: ContactPoint
 Description: "ContactPoint with required messaging channel extension when system = other"
 

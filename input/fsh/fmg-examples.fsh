@@ -21,6 +21,7 @@ Instance: ExamplePatientSMS
 InstanceOf: FMGPatient
 Usage: #example
 Title: "Patient with SMS Contact"
+Description: "Demonstrates ContactPoint.system = sms"
 
 * identifier.system = "http://example.org/mrn"
 * identifier.value = "MRN-20001"

@@ -16,10 +16,10 @@ for structured inbound and outbound message exchange.
 
 The gateway models message flow using two distinct profiles:
 
-- **[InboundCommunication](https://mwije.github.io/fhir-messaging-gateway-ig/StructureDefinition-FMGInboundCommunication.html)** 
+- **[FMGInboundCommunication](https://mwije.github.io/fhir-messaging-gateway-ig/StructureDefinition-FMGInboundCommunication.html)** 
   A profile of Communication representing messages received by the gateway as immutable records.
 
-- **[OutboundCommunicationRequest](https://mwije.github.io/fhir-messaging-gateway-ig/StructureDefinition-FMGOutboundCommunicationRequest.html)**
+- **[FMGOutboundCommunicationRequest](https://mwije.github.io/fhir-messaging-gateway-ig/StructureDefinition-FMGOutboundCommunicationRequest.html)**
   A profile of CommunicationRequest representing instructions to deliver a message to an external destination.
 
 This separation enforces a clear architectural boundary:
@@ -73,8 +73,13 @@ You can trigger the workflow by pushing changes to the `main` branch. The **Buil
 
 | Profile | Base Resource | Purpose |
 |---------|---------------|---------|
-| InboundMessage | Communication | Represents messages received by the gateway |
-| OutboundMessageRequest | CommunicationRequest | Represents outbound delivery requests |
+| [FMGInboundCommunication](https://mwije.github.io/fhir-messaging-gateway-ig/StructureDefinition-FMGInboundCommunication.html) | Communication | Messages received by the gateway as immutable records |
+| [FMGOutboundCommunicationRequest](https://mwije.github.io/fhir-messaging-gateway-ig/StructureDefinition-FMGOutboundCommunicationRequest.html) | CommunicationRequest | Instructions to deliver a message to an external destination |
+| [FMGPatient](https://mwije.github.io/fhir-messaging-gateway-ig/StructureDefinition-FMGPatient.html) | Patient | Patient with messaging-capable contact points |
+| [FMGMessagingContactPoint](https://mwije.github.io/fhir-messaging-gateway-ig/StructureDefinition-FMGMessagingContactPoint.html) | ContactPoint | ContactPoint with required channel extension when system = other |
+| [FMGOutboundTransactionBundle](https://mwije.github.io/fhir-messaging-gateway-ig/StructureDefinition-FMGOutboundTransactionBundle.html) | Bundle | Transaction bundle for batch outbound submissions |
+
+Additional participant profiles: FMGPractitioner, FMGRelatedPerson, FMGCareTeam.
 
 
 ## Contributing

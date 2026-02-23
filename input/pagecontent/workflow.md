@@ -85,7 +85,7 @@ The gateway **SHALL** enforce access control on **all** operations:
 - Same authorization and terminal state restrictions as PUT apply
 
 **Delete Operations (DELETE):**
-- Clients may only delete resources they are authorized to access
+- Clients **MAY** only delete resources they are authorized to access
 
 > **Security Note:** Authorization is enforced server-side. Clients cannot bypass restrictions by omitting filters. The gateway **MUST** reject unauthorized requests with appropriate error codes (403 Forbidden).
 

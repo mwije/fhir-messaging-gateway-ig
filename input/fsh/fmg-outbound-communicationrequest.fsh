@@ -1,5 +1,7 @@
 
 Profile: FMGOutboundCommunicationRequest
+Id: FMGOutboundCommunicationRequest
+Title: "Outbound CommunicationRequest"
 Parent: CommunicationRequest
 Description: "CommunicationRequest profile for outbound message delivery orchestration."
 * priority 1..1 SU

@@ -1,5 +1,7 @@
 
 Profile: FMGOutboundTransactionBundle
+Id: FMGOutboundTransactionBundle
+Title: "Outbound Transaction Bundle"
 Parent: Bundle
 Description: "Bundle profile for submitting multiple outbound message requests in a single transaction."
 * type = #transaction (exactly)

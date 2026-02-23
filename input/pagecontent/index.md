@@ -4,8 +4,8 @@ This Implementation Guide defines a FHIR-based messaging gateway architecture fo
 
 The gateway models message flow using two distinct profiles:
 
-- **[InboundCommunication](StructureDefinition-FMGInboundCommunication.html)** – a profile of Communication representing messages received by the gateway as immutable records.
-- **[OutboundCommunicationRequest](StructureDefinition-FMGOutboundCommunicationRequest.html)** – a profile of CommunicationRequest representing delivery intent toward external systems.
+- **[FMGInboundCommunication](StructureDefinition-FMGInboundCommunication.html)** – a profile of Communication representing messages received by the gateway as immutable records.
+- **[FMGOutboundCommunicationRequest](StructureDefinition-FMGOutboundCommunicationRequest.html)** – a profile of CommunicationRequest representing delivery intent toward external systems.
 
 Reception and delivery are modeled separately to preserve semantic clarity, traceability, and alignment with FHIR's event vs request pattern.
 
@@ -33,6 +33,8 @@ Reception and delivery are modeled separately to preserve semantic clarity, trac
 | [FMGPatient](StructureDefinition-FMGPatient.html) | Patient | Patient with messaging-capable contact points |
 | [FMGMessagingContactPoint](StructureDefinition-FMGMessagingContactPoint.html) | ContactPoint | ContactPoint with required channel extension when system = other |
 | [FMGOutboundTransactionBundle](StructureDefinition-FMGOutboundTransactionBundle.html) | Bundle | Transaction bundle for batch outbound submissions |
+
+There are also participant profiles for [Practitioner](StructureDefinition-FMGPractitioner.html), [RelatedPerson](StructureDefinition-FMGRelatedPerson.html), and [CareTeam](StructureDefinition-FMGCareTeam.html) that require messaging-capable contact points.
 
 ### Scope
 

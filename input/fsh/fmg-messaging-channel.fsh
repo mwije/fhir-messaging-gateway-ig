@@ -144,6 +144,7 @@ Description: "Messaging channels supported by the FMG messaging gateway, includi
 
 // Full valueset
 ValueSet: FMGMessagingChannelVS
+Id: FMGMessagingChannelVS
 Title: "Messaging Channel ValueSet"
 Description: "All messaging channels supported by the FMG messaging gateway."
 * include codes from system FMGMessagingChannelCS
@@ -151,6 +152,7 @@ Description: "All messaging channels supported by the FMG messaging gateway."
 
 // Mapping with HL7 FHIR ParticipationMode CS
 Instance: FMGParticipationModeToMessagingChannel
+Id: FMGParticipationModeToMessagingChannel
 InstanceOf: ConceptMap
 Usage: #definition
 Title: "Map v3 ParticipationMode to FMG Messaging Channels"
@@ -200,6 +202,7 @@ Description: "Maps HL7 v3 ParticipationMode codes to FMG messaging channel codes
 
 // Mapping with HL7 FHIR contact-point-system CS
 Instance: FMGContactPointSystemToMessagingChannel
+Id: FMGContactPointSystemToMessagingChannel
 InstanceOf: ConceptMap
 Usage: #definition
 Title: "Map FHIR contact-point-system to FMG Messaging Channels"

@@ -1,5 +1,7 @@
 
 Profile: FMGInboundCommunication
+Id: FMGInboundCommunication
+Title: "Inbound Communication"
 Parent: Communication
 Description: "Communication profile for inbound messages received by the gateway."
 * priority 1..1 SU
