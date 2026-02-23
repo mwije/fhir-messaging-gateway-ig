@@ -152,17 +152,16 @@ Description: "All messaging channels supported by the FMG messaging gateway."
 
 // Mapping with HL7 FHIR ParticipationMode CS
 Instance: FMGParticipationModeToMessagingChannel
-Id: FMGParticipationModeToMessagingChannel
 InstanceOf: ConceptMap
 Usage: #definition
 Title: "Map v3 ParticipationMode to FMG Messaging Channels"
 Description: "Maps HL7 v3 ParticipationMode codes to FMG messaging channel codes where semantically appropriate."
 * status = #active
 * sourceUri = "http://terminology.hl7.org/CodeSystem/v3-ParticipationMode"
-* targetUri = "http://mwije.github.io/fhir-messaging-gateway-ig/CodeSystem/FMGMessagingChannelCS"
+* targetUri = "https://mwije.github.io/fhir-messaging-gateway-ig/CodeSystem-FMGMessagingChannelCS.html"
 
 * group[0].source = "http://terminology.hl7.org/CodeSystem/v3-ParticipationMode"
-* group[0].target = "http://mwije.github.io/fhir-messaging-gateway-ig/CodeSystem/FMGMessagingChannelCS"
+* group[0].target = "https://mwije.github.io/fhir-messaging-gateway-ig/CodeSystem-FMGMessagingChannelCS.html"
 
 * group[0].element[0].code = #PHONE
 * group[0].element[0].target[0].code = #phone
@@ -202,17 +201,16 @@ Description: "Maps HL7 v3 ParticipationMode codes to FMG messaging channel codes
 
 // Mapping with HL7 FHIR contact-point-system CS
 Instance: FMGContactPointSystemToMessagingChannel
-Id: FMGContactPointSystemToMessagingChannel
 InstanceOf: ConceptMap
 Usage: #definition
 Title: "Map FHIR contact-point-system to FMG Messaging Channels"
 Description: "Maps FHIR contact-point-system codes to FMG transport-level messaging channels."
 * status = #active
 * sourceUri = "http://hl7.org/fhir/contact-point-system"
-* targetUri = "http://mwije.github.io/fhir-messaging-gateway-ig/CodeSystem/FMGMessagingChannelCS"
+* targetUri = "https://mwije.github.io/fhir-messaging-gateway-ig/CodeSystem-FMGMessagingChannelCS.html"
 
 * group[0].source = "http://hl7.org/fhir/contact-point-system"
-* group[0].target = "http://mwije.github.io/fhir-messaging-gateway-ig/CodeSystem/FMGMessagingChannelCS"
+* group[0].target = "https://mwije.github.io/fhir-messaging-gateway-ig/CodeSystem-FMGMessagingChannelCS.html"
 
 * group[0].element[0].code = #sms
 * group[0].element[0].target[0].code = #sms
