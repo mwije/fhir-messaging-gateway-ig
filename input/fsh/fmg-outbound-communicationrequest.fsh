@@ -15,7 +15,7 @@ Description: "Outgoing Message"
 * status 1..1
 * status from FMGOutboundCommunicationRequestStatusVS (required)
 
-* medium only FMGMessagingChannelVS (extensible)
+* medium from FMGMessagingChannelVS (extensible)
 * extension contains fmgDeliveryPolicy 1..1
 * extension[fmgDeliveryPolicy].description = "Controls delivery orchestration behavior (channel selection & execution mode)."
 

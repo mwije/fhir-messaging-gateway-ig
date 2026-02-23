@@ -1,6 +1,5 @@
 CodeSystem: FMGMessagingChannelCS
 Title: "Messaging Channel"
-Content: complete
 Description: "Messaging channels supported by the FMG messaging gateway, including traditional and app-based platforms."
 
 // Traditional channels
@@ -43,10 +42,11 @@ Description: "All messaging channels supported by the FMG messaging gateway."
 
 
 // Mapping with HL7 FHIR ParticipationMode CS
-ConceptMap: FMGParticipationModeToMessagingChannel
+Instance: FMGParticipationModeToMessagingChannel
+InstanceOf: ConceptMap
 Title: "Map v3 ParticipationMode to FMG Messaging Channels"
 Id: FMGParticipationModeToMessagingChannel
-Status: active
+
 Description: "Maps HL7 v3 ParticipationMode codes to FMG messaging channel codes where semantically appropriate."
 
 * group[0].source = "http://terminology.hl7.org/CodeSystem/v3-ParticipationMode"
@@ -89,10 +89,10 @@ Description: "Maps HL7 v3 ParticipationMode codes to FMG messaging channel codes
     * group[0].element[5].target[0].relationship = equivalent
 
 // Mapping with HL7 FHIR contact-point-system CS
-ConceptMap: FMGContactPointSystemToMessagingChannel
+Instance: FMGContactPointSystemToMessagingChannel
+InstanceOf: ConceptMap
 Title: "Map FHIR contact-point-system to FMG Messaging Channels"
 Id: FMGContactPointSystemToMessagingChannel
-Status: active
 Description: "Maps FHIR contact-point-system codes to FMG transport-level messaging channels."
 
 * group[0].source = "http://hl7.org/fhir/contact-point-system"
