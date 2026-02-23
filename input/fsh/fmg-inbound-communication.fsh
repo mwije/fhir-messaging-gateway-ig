@@ -18,3 +18,4 @@ Description: "Incoming Message"
 * recipient.reference 0..1
 * recipient obeys ref-identifier-or-literal
 
+* medium only FMGMessagingChannelVS 1..1 (extensible)

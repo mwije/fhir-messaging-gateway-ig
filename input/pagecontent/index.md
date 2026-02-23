@@ -14,8 +14,7 @@ Reception and delivery are modeled separately to preserve semantic clarity, trac
 - Inbound messages are immutable event records.
 - Outbound messages represent explicit delivery intent.
 - Payloads are conveyed using attachments to preserve transport neutrality.
-- Transport channels are extensible beyond the base FHIR `ContactPoint` value set through governed terminology and invariant enforcement.
-- Transport channels are extensible via the **[FMGMessagingContactPoint](StructureDefinition-FMGMessagingContactPoint.html)** profile, which enforces explicit identification of non-standard messaging platforms (like WhatsApp) when `ContactPoint.system = other`.
+- Transport channels are extensible beyond the base FHIR `ContactPoint` value set through governed terminology and invariant enforcement. using the **[FMGMessagingContactPoint](StructureDefinition-FMGMessagingContactPoint.html)** profile, which enforces explicit identification of non-standard platforms (WhatsApp, Telegram, Signal, etc.) are fully integrated via a controlled CodeSystem/ValueSet([FMGMessagingChannelCS](StructureDefinition-FMGMessagingChannelCS.html), [FMGMessagingChannelVS](StructureDefinition-FMGMessagingChannelVS.html)). It is enforced when `ContactPoint.system = other` and integrates with the IG’s ConceptMaps, which map legacy v3 ParticipationMode codes and standard ContactPoint.system codes to FMG messaging channels for consistent routing and interoperability.
 
 ### Scope
 

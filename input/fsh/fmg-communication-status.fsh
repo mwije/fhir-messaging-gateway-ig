@@ -1,26 +1,3 @@
-
-CodeSystem: FMGMessagingChannelCS
-Title: "Messaging Channel"
-* #sms
-* #whatsapp
-* #telegram
-* #signal
-* #email
-* #voice
-
-
-ValueSet: FMGMessagingChannelVS
-Title: "Messaging Channel ValueSet"
-* include codes from system FMGMessagingChannelCS
-
-
-Extension: FMGMessagingChannelExtension
-Title: "Messaging Channel Extension"
-Description: "Specifies the messaging platform when ContactPoint.system = other"
-* value[x] only code
-* valueCode from FMGMessagingChannelVS (required)
-
-
 ValueSet: FMGInboundCommunicationStatusVS
 Id: fmg-inbound-communication-status
 Title: "FMG Inbound Communication Status"
