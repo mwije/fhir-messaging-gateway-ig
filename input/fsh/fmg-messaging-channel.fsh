@@ -54,39 +54,39 @@ Description: "Maps HL7 v3 ParticipationMode codes to FMG messaging channel codes
 
 * group[0].element[0].code = #PHONE
 * group[0].element[0].target[0].code = #phone
-* group[0].element[0].target[0].relationship = #equivalent
+* group[0].element[0].target[0].equivalence = #equivalent
 
 * group[0].element[1].code = #EMAILWRIT
 * group[0].element[1].target[0].code = #email
-* group[0].element[1].target[0].relationship = #equivalent
+* group[0].element[1].target[0].equivalence = #equivalent
 
 * group[0].element[2].code = #SMSWRIT
 * group[0].element[2].target[0].code = #sms
-* group[0].element[2].target[0].relationship = #equivalent
+* group[0].element[2].target[0].equivalence = #equivalent
 
 * group[0].element[3].code = #MMSWRIT
 * group[0].element[3].target[0].code = #mms
-* group[0].element[3].target[0].relationship = #equivalent
+* group[0].element[3].target[0].equivalence = #equivalent
 
 * group[0].element[4].code = #APPWRIT
 * group[0].element[4].target[0].code = #whatsapp
-* group[0].element[4].target[0].relationship = #narrower
+* group[0].element[4].target[0].equivalence = #narrower
 * group[0].element[4].target[1].code = #telegram
-* group[0].element[4].target[1].relationship = #narrower
+* group[0].element[4].target[1].equivalence = #narrower
 * group[0].element[4].target[2].code = #signal
-* group[0].element[4].target[2].relationship = #narrower
+* group[0].element[4].target[2].equivalence = #narrower
 * group[0].element[4].target[3].code = #facebook-messenger
-* group[0].element[4].target[3].relationship = #narrower
+* group[0].element[4].target[3].equivalence = #narrower
 * group[0].element[4].target[4].code = #apple-imessage
-* group[0].element[4].target[4].relationship = #narrower
+* group[0].element[4].target[4].equivalence = #narrower
 * group[0].element[4].target[5].code = #ms-teams
-* group[0].element[4].target[5].relationship = #narrower
+* group[0].element[4].target[5].equivalence = #narrower
 * group[0].element[4].target[6].code = #slack
-* group[0].element[4].target[6].relationship = #narrower
+* group[0].element[4].target[6].equivalence = #narrower
   
 * group[0].element[5].code = #FAXWRIT
 * group[0].element[5].target[0].code = #fax
-* group[0].element[5].target[0].relationship = #equivalent
+* group[0].element[5].target[0].equivalence = #equivalent
 
 // Mapping with HL7 FHIR contact-point-system CS
 Instance: FMGContactPointSystemToMessagingChannel
@@ -101,16 +101,16 @@ Description: "Maps FHIR contact-point-system codes to FMG transport-level messag
 
 * group[0].element[0].code = #sms
 * group[0].element[0].target[0].code = #sms
-* group[0].element[0].target[0].relationship = #equivalent
+* group[0].element[0].target[0].equivalence = #equivalent
 
 * group[0].element[1].code = #phone
 * group[0].element[1].target[0].code = #phone
-* group[0].element[1].target[0].relationship = #equivalent
+* group[0].element[1].target[0].equivalence = #equivalent
 
 * group[0].element[2].code = #fax
 * group[0].element[2].target[0].code = #fax
-* group[0].element[2].target[0].relationship = #equivalent
+* group[0].element[2].target[0].equivalence = #equivalent
 
 * group[0].element[3].code = #email
 * group[0].element[3].target[0].code = #email
-* group[0].element[3].target[0].relationship = #equivalent
+* group[0].element[3].target[0].equivalence = #equivalent
