@@ -1,4 +1,5 @@
 ValueSet: FMGInboundCommunicationStatusVS
+Id: FMGInboundCommunicationStatusVS
 Title: "FMG Inbound Communication Status"
 Description: "Permitted status values for inbound messages"
 
@@ -8,6 +9,7 @@ Description: "Permitted status values for inbound messages"
 
 
 ValueSet: FMGOutboundCommunicationRequestStatusVS
+Id: FMGOutboundCommunicationRequestStatusVS
 Title: "FMG Outbound CommunicationRequest Status"
 Description: "Permitted status values for outbound delivery"
 

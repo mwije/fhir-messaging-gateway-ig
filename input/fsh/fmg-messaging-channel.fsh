@@ -15,81 +15,131 @@ Description: "Messaging channels supported by the FMG messaging gateway, includi
 * ^property[2].description = "Indicates the channel supports multimedia messages."
 * ^property[3].code = #secure
 * ^property[3].type = #boolean
-* ^property[3].description = "Indicates whether the channel provides end-to-end encryption or HIPAA-compliant security."
+* ^property[3].description = "Indicates the channel provides end-to-end encryption or HIPAA-compliant security."
 
 // Traditional channels
+
 * #sms "SMS" "Short Message Service, text messaging over cellular network."
-  * ^property[0].valueBoolean = true
-  * ^property[1].valueBoolean = true
-  * ^property[2].valueBoolean = false
-  * ^property[3].valueBoolean = false
+  * property[+].code = #async
+  * property[=].valueBoolean = true
+  * property[+].code = #requires-msisdn
+  * property[=].valueBoolean = true
+  * property[+].code = #supports-media
+  * property[=].valueBoolean = false
+  * property[+].code = #secure
+  * property[=].valueBoolean = false
 
 * #mms "MMS" "Multimedia Message Service, supports images/video over cellular network."
-  * ^property[0].valueBoolean = true
-  * ^property[1].valueBoolean = true
-  * ^property[2].valueBoolean = true
-  * ^property[3].valueBoolean = false
+  * property[+].code = #async
+  * property[=].valueBoolean = true
+  * property[+].code = #requires-msisdn
+  * property[=].valueBoolean = true
+  * property[+].code = #supports-media
+  * property[=].valueBoolean = true
+  * property[+].code = #secure
+  * property[=].valueBoolean = false
 
 * #phone "Phone Call" "Voice telephone call."
-  * ^property[0].valueBoolean = false
-  * ^property[1].valueBoolean = true
-  * ^property[2].valueBoolean = false
-  * ^property[3].valueBoolean = false
+  * property[+].code = #async
+  * property[=].valueBoolean = false
+  * property[+].code = #requires-msisdn
+  * property[=].valueBoolean = true
+  * property[+].code = #supports-media
+  * property[=].valueBoolean = false
+  * property[+].code = #secure
+  * property[=].valueBoolean = false
 
 * #fax "Fax" "Facsimile messaging."
-  * ^property[0].valueBoolean = false
-  * ^property[1].valueBoolean = true
-  * ^property[2].valueBoolean = true
-  * ^property[3].valueBoolean = false
+  * property[+].code = #async
+  * property[=].valueBoolean = false
+  * property[+].code = #requires-msisdn
+  * property[=].valueBoolean = true
+  * property[+].code = #supports-media
+  * property[=].valueBoolean = true
+  * property[+].code = #secure
+  * property[=].valueBoolean = false
 
 * #email "Email" "Electronic mail messaging."
-  * ^property[0].valueBoolean = true
-  * ^property[1].valueBoolean = false
-  * ^property[2].valueBoolean = true
-  * ^property[3].valueBoolean = false
+  * property[+].code = #async
+  * property[=].valueBoolean = true
+  * property[+].code = #requires-msisdn
+  * property[=].valueBoolean = false
+  * property[+].code = #supports-media
+  * property[=].valueBoolean = true
+  * property[+].code = #secure
+  * property[=].valueBoolean = false
 
 // Popular messaging services
+
 * #whatsapp "WhatsApp" "WhatsApp messaging platform."
-  * ^property[0].valueBoolean = true
-  * ^property[1].valueBoolean = true
-  * ^property[2].valueBoolean = true
-  * ^property[3].valueBoolean = true
+  * property[+].code = #async
+  * property[=].valueBoolean = true
+  * property[+].code = #requires-msisdn
+  * property[=].valueBoolean = true
+  * property[+].code = #supports-media
+  * property[=].valueBoolean = true
+  * property[+].code = #secure
+  * property[=].valueBoolean = true
 
 * #telegram "Telegram" "Telegram messaging platform."
-  * ^property[0].valueBoolean = true
-  * ^property[1].valueBoolean = true
-  * ^property[2].valueBoolean = true
-  * ^property[3].valueBoolean = false
+  * property[+].code = #async
+  * property[=].valueBoolean = true
+  * property[+].code = #requires-msisdn
+  * property[=].valueBoolean = true
+  * property[+].code = #supports-media
+  * property[=].valueBoolean = true
+  * property[+].code = #secure
+  * property[=].valueBoolean = false
 
 * #signal "Signal" "Signal messaging platform."
-  * ^property[0].valueBoolean = true
-  * ^property[1].valueBoolean = true
-  * ^property[2].valueBoolean = true
-  * ^property[3].valueBoolean = true
+  * property[+].code = #async
+  * property[=].valueBoolean = true
+  * property[+].code = #requires-msisdn
+  * property[=].valueBoolean = true
+  * property[+].code = #supports-media
+  * property[=].valueBoolean = true
+  * property[+].code = #secure
+  * property[=].valueBoolean = true
 
 * #facebook-messenger "Facebook Messenger" "Meta messaging platform."
-  * ^property[0].valueBoolean = true
-  * ^property[1].valueBoolean = true
-  * ^property[2].valueBoolean = true
-  * ^property[3].valueBoolean = true
+  * property[+].code = #async
+  * property[=].valueBoolean = true
+  * property[+].code = #requires-msisdn
+  * property[=].valueBoolean = true
+  * property[+].code = #supports-media
+  * property[=].valueBoolean = true
+  * property[+].code = #secure
+  * property[=].valueBoolean = true
 
 * #apple-imessage "Apple iMessage" "Apple iMessage platform."
-  * ^property[0].valueBoolean = true
-  * ^property[1].valueBoolean = true
-  * ^property[2].valueBoolean = true
-  * ^property[3].valueBoolean = true
+  * property[+].code = #async
+  * property[=].valueBoolean = true
+  * property[+].code = #requires-msisdn
+  * property[=].valueBoolean = true
+  * property[+].code = #supports-media
+  * property[=].valueBoolean = true
+  * property[+].code = #secure
+  * property[=].valueBoolean = true
 
 * #ms-teams "Microsoft Teams Chat" "Microsoft Teams messaging platform."
-  * ^property[0].valueBoolean = true
-  * ^property[1].valueBoolean = false
-  * ^property[2].valueBoolean = true
-  * ^property[3].valueBoolean = true
+  * property[+].code = #async
+  * property[=].valueBoolean = true
+  * property[+].code = #requires-msisdn
+  * property[=].valueBoolean = false
+  * property[+].code = #supports-media
+  * property[=].valueBoolean = true
+  * property[+].code = #secure
+  * property[=].valueBoolean = true
 
 * #slack "Slack" "Slack messaging platform."
-  * ^property[0].valueBoolean = true
-  * ^property[1].valueBoolean = false
-  * ^property[2].valueBoolean = true
-  * ^property[3].valueBoolean = true
+  * property[+].code = #async
+  * property[=].valueBoolean = true
+  * property[+].code = #requires-msisdn
+  * property[=].valueBoolean = false
+  * property[+].code = #supports-media
+  * property[=].valueBoolean = true
+  * property[+].code = #secure
+  * property[=].valueBoolean = true
 
 
 // Full valueset

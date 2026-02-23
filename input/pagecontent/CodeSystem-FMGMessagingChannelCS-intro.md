@@ -37,7 +37,7 @@ Each channel includes properties for routing and operational logic:
   "value": "+94771234567",
   "extension": [
     {
-      "url": "https://mwije.github.io/fhir-messaging-gateway-ig/StructureDefinition/FMGMessagingChannelExtension",
+      "url": "https://mwije.github.io/fhir-messaging-gateway-ig/StructureDefinition-FMGMessagingChannelExtension.html",
       "valueCode": "whatsapp"
     }
   ]

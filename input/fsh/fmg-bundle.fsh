@@ -1,7 +1,7 @@
 
 Profile: FMGOutboundTransactionBundle
 Parent: Bundle
-Description: "Outgoing Message Bundle"
+Description: "Bundle profile for submitting multiple outbound message requests in a single transaction."
 * type = #transaction (exactly)
 * entry ^slicing.discriminator.type = #type
 * entry ^slicing.discriminator.path = "resource"

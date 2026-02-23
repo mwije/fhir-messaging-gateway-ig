@@ -14,7 +14,7 @@ Description: "Demonstrates ContactPoint.system = other with messaging channel ex
 * telecom[0].system = #other
 * telecom[0].value = "+94771234567"
 
-* telecom[0].extension[0].url = "http://mwije.github.io/messaging-gateway-ig/StructureDefinition/messaging-channel-extension"
+* telecom[0].extension[0].url = "https://mwije.github.io/fhir-messaging-gateway-ig/StructureDefinition-FMGMessagingChannelExtension.html"
 * telecom[0].extension[0].valueCode = #whatsapp
 
 Instance: ExamplePatientSMS
@@ -41,7 +41,7 @@ Description: "Outbound reminder message to a patient via WhatsApp"
 * status = #active
 * priority = #routine
 * occurrenceDateTime = "2026-02-20T09:00:00+05:30"
-* medium = #MSGWRIT
+* medium = #whatsapp
 
 * recipient.identifier.system = "http://example.org/mrn"
 * recipient.identifier.value = "MRN-10001"
@@ -79,7 +79,7 @@ Description: "Message received from patient confirming appointment"
 * status = #completed
 * priority = #routine
 * received = "2026-02-19T18:45:00+05:30"
-* medium = #SMSWRIT
+* medium = #sms
 
 * sender.identifier.system = "http://example.org/mrn"
 * sender.identifier.value = "MRN-10001"

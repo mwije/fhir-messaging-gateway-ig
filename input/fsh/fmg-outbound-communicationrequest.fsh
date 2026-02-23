@@ -1,7 +1,7 @@
 
 Profile: FMGOutboundCommunicationRequest
 Parent: CommunicationRequest
-Description: "Outgoing Message"
+Description: "CommunicationRequest profile for outbound message delivery orchestration."
 * priority 1..1 SU
 * payload 1..*
   * content[x] only Attachment
@@ -11,7 +11,7 @@ Description: "Outgoing Message"
 * recipient obeys ref-identifier-or-literal
 
 * occurrence[x] only dateTime
-* occurrenceDateTime 1..1
+* occurrenceDateTime 0..1
 * status 1..1
 * status from FMGOutboundCommunicationRequestStatusVS (required)
 

@@ -1,5 +1,6 @@
 
 Profile: FMGMessagingContactPoint
+Id: FMGMessagingContactPoint
 Parent: ContactPoint
 Description: "ContactPoint with required messaging channel extension when system = other"
 
@@ -9,12 +10,13 @@ Description: "ContactPoint with required messaging channel extension when system
 
 Invariant: gp-1
 Description: "If system is 'other', FMGMessagingChannelExtension must be present"
-Expression: "system = 'other' implies extension.exists(url = 'http://mwije.github.io/messaging-gateway-ig/StructureDefinition-FMGMessagingChannelExtension.html')"
+Expression: "system = 'other' implies extension.exists(url = 'https://mwije.github.io/fhir-messaging-gateway-ig/StructureDefinition-FMGMessagingChannelExtension.html')"
 Severity: #error
 
 
 // Messaging Channel Extension
 Extension: FMGMessagingChannelExtension
+Id: FMGMessagingChannelExtension
 Title: "Messaging Channel Extension"
 Description: "Specifies the messaging platform when ContactPoint.system = other"
 * value[x] only code

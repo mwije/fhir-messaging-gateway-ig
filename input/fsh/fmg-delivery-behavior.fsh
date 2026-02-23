@@ -25,15 +25,19 @@ Description: "Allowed execution modes for the FMG messaging gateway."
 
 CodeSystem: FMGChannelSelectionPolicy
 Id: FMGChannelSelectionPolicy
+Title: "FMG Channel Selection Policy"
 * #requested-only "Requested Only"
 * #allow-substitution "Allow Substitution"
 
 ValueSet: FMGChannelSelectionPolicyVS
+Id: FMGChannelSelectionPolicyVS
+Title: "FMG Channel Selection Policy ValueSet"
 Description: "Allowed channel selection mode for the FMG messaging gateway."
 * ^status = #active
 * include codes from system FMGChannelSelectionPolicy
 
 Extension: FMGDeliveryPolicy
+Id: FMGDeliveryPolicy
 Title: "FMG Delivery Policy"
 Description: "Defines delivery orchestration behavior for a CommunicationRequest."
 * ^status = #active

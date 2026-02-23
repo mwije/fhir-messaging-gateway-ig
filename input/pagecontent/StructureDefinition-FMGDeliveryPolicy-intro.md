@@ -40,7 +40,7 @@ The extension contains two sub-extensions:
 {
   "extension": [
     {
-      "url": "https://mwije.github.io/fhir-messaging-gateway-ig/StructureDefinition/FMGDeliveryPolicy",
+      "url": "https://mwije.github.io/fhir-messaging-gateway-ig/StructureDefinition-FMGDeliveryPolicy.html",
       "extension": [
         {
           "url": "channelSelectionPolicy",

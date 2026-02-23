@@ -33,7 +33,7 @@ When `ContactPoint.system` is a standard value (sms, email, phone, fax), the ext
   "value": "+94771234567",
   "extension": [
     {
-      "url": "http://mwije.github.io/fhir-messaging-gateway-ig/StructureDefinition/FMGMessagingChannelExtension",
+      "url": "https://mwije.github.io/fhir-messaging-gateway-ig/StructureDefinition-FMGMessagingChannelExtension.html",
       "valueCode": "whatsapp"
     }
   ]

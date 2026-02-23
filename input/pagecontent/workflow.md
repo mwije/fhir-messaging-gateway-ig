@@ -13,10 +13,10 @@ The gateway handles two distinct message directions:
 ```
 External System          Gateway              Client System
        |                    |                      |
-       |---[Inbound]------->|                      |
-       |   (non-FHIR)       |                      |
+       |---[Inbound]------->|------[Inbound]------>|
+       |   (non-FHIR)       |        (GET)         |
        |                    |                      |
-       |                    |<-----[Outbound]------|
+       |<-------------------|<-----[Outbound]------|
        |                    |   (POST/PUT/DELETE)  |
        |                    |                      |
 ```
