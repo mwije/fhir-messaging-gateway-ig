@@ -3,80 +3,6 @@ Id: FMGMessagingChannelCS
 Title: "Messaging Channel"
 Description: "Messaging channels supported by the FMG messaging gateway, including traditional and app-based platforms."
 
-// Traditional channels
-* #sms "SMS" "Short Message Service, text messaging over cellular network."
-  * ^property[async].valueBoolean = true
-  * ^property[requires-msisdn].valueBoolean = true
-  * ^property[supports-media].valueBoolean = false
-  * ^property[secure].valueBoolean = false
-
-* #mms "MMS" "Multimedia Message Service, supports images/video over cellular network."
-  * ^property[async].valueBoolean = true
-  * ^property[requires-msisdn].valueBoolean = true
-  * ^property[supports-media].valueBoolean = true
-  * ^property[secure].valueBoolean = false
-
-* #phone "Phone Call" "Voice telephone call."
-  * ^property[async].valueBoolean = false
-  * ^property[requires-msisdn].valueBoolean = true
-  * ^property[supports-media].valueBoolean = false
-  * ^property[secure].valueBoolean = false
-
-* #fax "Fax" "Facsimile messaging."
-  * ^property[async].valueBoolean = false
-  * ^property[requires-msisdn].valueBoolean = true
-  * ^property[supports-media].valueBoolean = true
-  * ^property[secure].valueBoolean = false
-
-* #email "Email" "Electronic mail messaging."
-  * ^property[async].valueBoolean = true
-  * ^property[requires-msisdn].valueBoolean = false
-  * ^property[supports-media].valueBoolean = true
-  * ^property[secure].valueBoolean = false
-
-// Popular messaging services
-* #whatsapp "WhatsApp" "WhatsApp messaging platform."
-  * ^property[async].valueBoolean = true
-  * ^property[requires-msisdn].valueBoolean = true
-  * ^property[supports-media].valueBoolean = true
-  * ^property[secure].valueBoolean = true
-
-* #telegram "Telegram" "Telegram messaging platform."
-  * ^property[async].valueBoolean = true
-  * ^property[requires-msisdn].valueBoolean = true
-  * ^property[supports-media].valueBoolean = true
-  * ^property[secure].valueBoolean = false
-
-* #signal "Signal" "Signal messaging platform."
-  * ^property[async].valueBoolean = true
-  * ^property[requires-msisdn].valueBoolean = true
-  * ^property[supports-media].valueBoolean = true
-  * ^property[secure].valueBoolean = true
-
-* #facebook-messenger "Facebook Messenger" "Meta messaging platform."
-  * ^property[async].valueBoolean = true
-  * ^property[requires-msisdn].valueBoolean = true
-  * ^property[supports-media].valueBoolean = true
-  * ^property[secure].valueBoolean = true
-
-* #apple-imessage "Apple iMessage" "Apple iMessage platform."
-  * ^property[async].valueBoolean = true
-  * ^property[requires-msisdn].valueBoolean = true
-  * ^property[supports-media].valueBoolean = true
-  * ^property[secure].valueBoolean = true
-
-* #ms-teams "Microsoft Teams Chat" "Microsoft Teams messaging platform."
-  * ^property[async].valueBoolean = true
-  * ^property[requires-msisdn].valueBoolean = false
-  * ^property[supports-media].valueBoolean = true
-  * ^property[secure].valueBoolean = true
-
-* #slack "Slack" "Slack messaging platform."
-  * ^property[async].valueBoolean = true
-  * ^property[requires-msisdn].valueBoolean = false
-  * ^property[supports-media].valueBoolean = true
-  * ^property[secure].valueBoolean = true
-
 // Property definitions
 * ^property[0].code = #async
 * ^property[0].type = #boolean
@@ -90,6 +16,80 @@ Description: "Messaging channels supported by the FMG messaging gateway, includi
 * ^property[3].code = #secure
 * ^property[3].type = #boolean
 * ^property[3].description = "Indicates whether the channel provides end-to-end encryption or HIPAA-compliant security."
+
+// Traditional channels
+* #sms "SMS" "Short Message Service, text messaging over cellular network."
+  * ^property[0].valueBoolean = true
+  * ^property[1].valueBoolean = true
+  * ^property[2].valueBoolean = false
+  * ^property[3].valueBoolean = false
+
+* #mms "MMS" "Multimedia Message Service, supports images/video over cellular network."
+  * ^property[0].valueBoolean = true
+  * ^property[1].valueBoolean = true
+  * ^property[2].valueBoolean = true
+  * ^property[3].valueBoolean = false
+
+* #phone "Phone Call" "Voice telephone call."
+  * ^property[0].valueBoolean = false
+  * ^property[1].valueBoolean = true
+  * ^property[2].valueBoolean = false
+  * ^property[3].valueBoolean = false
+
+* #fax "Fax" "Facsimile messaging."
+  * ^property[0].valueBoolean = false
+  * ^property[1].valueBoolean = true
+  * ^property[2].valueBoolean = true
+  * ^property[3].valueBoolean = false
+
+* #email "Email" "Electronic mail messaging."
+  * ^property[0].valueBoolean = true
+  * ^property[1].valueBoolean = false
+  * ^property[2].valueBoolean = true
+  * ^property[3].valueBoolean = false
+
+// Popular messaging services
+* #whatsapp "WhatsApp" "WhatsApp messaging platform."
+  * ^property[0].valueBoolean = true
+  * ^property[1].valueBoolean = true
+  * ^property[2].valueBoolean = true
+  * ^property[3].valueBoolean = true
+
+* #telegram "Telegram" "Telegram messaging platform."
+  * ^property[0].valueBoolean = true
+  * ^property[1].valueBoolean = true
+  * ^property[2].valueBoolean = true
+  * ^property[3].valueBoolean = false
+
+* #signal "Signal" "Signal messaging platform."
+  * ^property[0].valueBoolean = true
+  * ^property[1].valueBoolean = true
+  * ^property[2].valueBoolean = true
+  * ^property[3].valueBoolean = true
+
+* #facebook-messenger "Facebook Messenger" "Meta messaging platform."
+  * ^property[0].valueBoolean = true
+  * ^property[1].valueBoolean = true
+  * ^property[2].valueBoolean = true
+  * ^property[3].valueBoolean = true
+
+* #apple-imessage "Apple iMessage" "Apple iMessage platform."
+  * ^property[0].valueBoolean = true
+  * ^property[1].valueBoolean = true
+  * ^property[2].valueBoolean = true
+  * ^property[3].valueBoolean = true
+
+* #ms-teams "Microsoft Teams Chat" "Microsoft Teams messaging platform."
+  * ^property[0].valueBoolean = true
+  * ^property[1].valueBoolean = false
+  * ^property[2].valueBoolean = true
+  * ^property[3].valueBoolean = true
+
+* #slack "Slack" "Slack messaging platform."
+  * ^property[0].valueBoolean = true
+  * ^property[1].valueBoolean = false
+  * ^property[2].valueBoolean = true
+  * ^property[3].valueBoolean = true
 
 
 // Full valueset
