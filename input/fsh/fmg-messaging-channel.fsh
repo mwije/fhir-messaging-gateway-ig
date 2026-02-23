@@ -5,21 +5,79 @@ Description: "Messaging channels supported by the FMG messaging gateway, includi
 
 // Traditional channels
 * #sms "SMS" "Short Message Service, text messaging over cellular network."
+  * ^property[async].valueBoolean = true
+  * ^property[requires-msisdn].valueBoolean = true
+  * ^property[supports-media].valueBoolean = false
+  * ^property[secure].valueBoolean = false
+
 * #mms "MMS" "Multimedia Message Service, supports images/video over cellular network."
+  * ^property[async].valueBoolean = true
+  * ^property[requires-msisdn].valueBoolean = true
+  * ^property[supports-media].valueBoolean = true
+  * ^property[secure].valueBoolean = false
+
 * #phone "Phone Call" "Voice telephone call."
+  * ^property[async].valueBoolean = false
+  * ^property[requires-msisdn].valueBoolean = true
+  * ^property[supports-media].valueBoolean = false
+  * ^property[secure].valueBoolean = false
+
 * #fax "Fax" "Facsimile messaging."
+  * ^property[async].valueBoolean = false
+  * ^property[requires-msisdn].valueBoolean = true
+  * ^property[supports-media].valueBoolean = true
+  * ^property[secure].valueBoolean = false
+
 * #email "Email" "Electronic mail messaging."
+  * ^property[async].valueBoolean = true
+  * ^property[requires-msisdn].valueBoolean = false
+  * ^property[supports-media].valueBoolean = true
+  * ^property[secure].valueBoolean = false
 
 // Popular messaging services
 * #whatsapp "WhatsApp" "WhatsApp messaging platform."
-* #telegram "Telegram" "Telegram messaging platform."
-* #signal "Signal" "Signal messaging platform."
-* #facebook-messenger "Facebook Messenger" "Meta messaging platform."
-* #apple-imessage "Apple iMessage" "Apple iMessage platform."
-* #ms-teams "Microsoft Teams Chat" "Microsoft Teams messaging platform."
-* #slack "Slack" "Slack messaging platform."
+  * ^property[async].valueBoolean = true
+  * ^property[requires-msisdn].valueBoolean = true
+  * ^property[supports-media].valueBoolean = true
+  * ^property[secure].valueBoolean = true
 
-// Optional properties for future-proofing
+* #telegram "Telegram" "Telegram messaging platform."
+  * ^property[async].valueBoolean = true
+  * ^property[requires-msisdn].valueBoolean = true
+  * ^property[supports-media].valueBoolean = true
+  * ^property[secure].valueBoolean = false
+
+* #signal "Signal" "Signal messaging platform."
+  * ^property[async].valueBoolean = true
+  * ^property[requires-msisdn].valueBoolean = true
+  * ^property[supports-media].valueBoolean = true
+  * ^property[secure].valueBoolean = true
+
+* #facebook-messenger "Facebook Messenger" "Meta messaging platform."
+  * ^property[async].valueBoolean = true
+  * ^property[requires-msisdn].valueBoolean = true
+  * ^property[supports-media].valueBoolean = true
+  * ^property[secure].valueBoolean = true
+
+* #apple-imessage "Apple iMessage" "Apple iMessage platform."
+  * ^property[async].valueBoolean = true
+  * ^property[requires-msisdn].valueBoolean = true
+  * ^property[supports-media].valueBoolean = true
+  * ^property[secure].valueBoolean = true
+
+* #ms-teams "Microsoft Teams Chat" "Microsoft Teams messaging platform."
+  * ^property[async].valueBoolean = true
+  * ^property[requires-msisdn].valueBoolean = false
+  * ^property[supports-media].valueBoolean = true
+  * ^property[secure].valueBoolean = true
+
+* #slack "Slack" "Slack messaging platform."
+  * ^property[async].valueBoolean = true
+  * ^property[requires-msisdn].valueBoolean = false
+  * ^property[supports-media].valueBoolean = true
+  * ^property[secure].valueBoolean = true
+
+// Property definitions
 * ^property[0].code = #async
 * ^property[0].type = #boolean
 * ^property[0].description = "Indicates asynchronous communication channel."
@@ -31,7 +89,7 @@ Description: "Messaging channels supported by the FMG messaging gateway, includi
 * ^property[2].description = "Indicates the channel supports multimedia messages."
 * ^property[3].code = #secure
 * ^property[3].type = #boolean
-* ^property[3].description = "Indicates whether the channel is end-to-end encrypted or HIPAA-compliant."
+* ^property[3].description = "Indicates whether the channel provides end-to-end encryption or HIPAA-compliant security."
 
 
 // Full valueset
@@ -48,6 +106,8 @@ Usage: #definition
 Title: "Map v3 ParticipationMode to FMG Messaging Channels"
 Description: "Maps HL7 v3 ParticipationMode codes to FMG messaging channel codes where semantically appropriate."
 * status = #active
+* sourceUri = "http://terminology.hl7.org/CodeSystem/v3-ParticipationMode"
+* targetUri = "http://mwije.github.io/fhir-messaging-gateway-ig/CodeSystem/FMGMessagingChannelCS"
 
 * group[0].source = "http://terminology.hl7.org/CodeSystem/v3-ParticipationMode"
 * group[0].target = "http://mwije.github.io/fhir-messaging-gateway-ig/CodeSystem/FMGMessagingChannelCS"
@@ -95,6 +155,8 @@ Usage: #definition
 Title: "Map FHIR contact-point-system to FMG Messaging Channels"
 Description: "Maps FHIR contact-point-system codes to FMG transport-level messaging channels."
 * status = #active
+* sourceUri = "http://hl7.org/fhir/contact-point-system"
+* targetUri = "http://mwije.github.io/fhir-messaging-gateway-ig/CodeSystem/FMGMessagingChannelCS"
 
 * group[0].source = "http://hl7.org/fhir/contact-point-system"
 * group[0].target = "http://mwije.github.io/fhir-messaging-gateway-ig/CodeSystem/FMGMessagingChannelCS"

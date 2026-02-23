@@ -138,6 +138,8 @@ Implementations SHALL:
 - Prefer business identifiers over literal resource IDs  
   (Exception: intra-Bundle referencing via `urn:uuid`)
 
+Error handling follows standard FHIR semantics. Validation failures SHALL return an OperationOutcome with details.
+
 ---
 
 ### Out of Scope

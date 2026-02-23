@@ -82,8 +82,8 @@ publisher:
 menu:
   Home: index.html
   Architecture: architecture.html
-  Workflow: workflow.html
   Terminology: terminology.html
+  Workflow: workflow.html
   Artifacts: artifacts.html
 
 # ╭───────────────────────────Less Common Implementation Guide Properties──────────────────────────╮
