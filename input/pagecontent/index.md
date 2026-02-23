@@ -7,14 +7,32 @@ The gateway models message flow using two distinct profiles:
 - **[InboundCommunication](StructureDefinition-FMGInboundCommunication.html)** – a profile of Communication representing messages received by the gateway as immutable records.
 - **[OutboundCommunicationRequest](StructureDefinition-FMGOutboundCommunicationRequest.html)** – a profile of CommunicationRequest representing delivery intent toward external systems.
 
-Reception and delivery are modeled separately to preserve semantic clarity, traceability, and alignment with FHIR’s event vs. request pattern.
+Reception and delivery are modeled separately to preserve semantic clarity, traceability, and alignment with FHIR's event vs request pattern.
 
 ### Architectural Principles
 
 - Inbound messages are immutable event records.
 - Outbound messages represent explicit delivery intent.
 - Payloads are conveyed using attachments to preserve transport neutrality.
-- Transport channels are extensible beyond the base FHIR `ContactPoint` value set through governed terminology and invariant enforcement. using the **[FMGMessagingContactPoint](StructureDefinition-FMGMessagingContactPoint.html)** profile, which enforces explicit identification of non-standard platforms (WhatsApp, Telegram, Signal, etc.) are fully integrated via a controlled CodeSystem/ValueSet([FMGMessagingChannelCS](StructureDefinition-FMGMessagingChannelCS.html), [FMGMessagingChannelVS](StructureDefinition-FMGMessagingChannelVS.html)). It is enforced when `ContactPoint.system = other` and integrates with the IG’s ConceptMaps, which map legacy v3 ParticipationMode codes and standard ContactPoint.system codes to FMG messaging channels for consistent routing and interoperability.
+- Transport channels are extensible beyond the base FHIR `ContactPoint` value set through governed terminology.
+
+  When `ContactPoint.system = other`, the **[FMGMessagingChannelExtension](StructureDefinition-FMGMessagingChannelExtension.html)** extension **must** be present to identify the non-standard platform (e.g., WhatsApp, Telegram, Signal) and is bound to the **[FMGMessagingChannelVS](ValueSet-FMGMessagingChannelVS.html)** ValueSet.
+
+  If `ContactPoint.system` uses a standard value, the extension may be present but is **ignored** for routing; the `system` itself determines the channel.
+
+  Legacy v3 ParticipationMode codes and standard ContactPoint.system codes are mapped to FMG messaging channels via ConceptMaps to enable consistent routing and interoperability.
+
+---
+
+### Profiles Overview
+
+| Profile | Base Resource | Purpose |
+|---------|---------------|---------|
+| [FMGInboundCommunication](StructureDefinition-FMGInboundCommunication.html) | Communication | Messages received by the gateway as immutable records |
+| [FMGOutboundCommunicationRequest](StructureDefinition-FMGOutboundCommunicationRequest.html) | CommunicationRequest | Instructions to deliver a message to an external destination |
+| [FMGPatient](StructureDefinition-FMGPatient.html) | Patient | Patient with messaging-capable contact points |
+| [FMGMessagingContactPoint](StructureDefinition-FMGMessagingContactPoint.html) | ContactPoint | ContactPoint with required channel extension when system = other |
+| [FMGOutboundTransactionBundle](StructureDefinition-FMGOutboundTransactionBundle.html) | Bundle | Transaction bundle for batch outbound submissions |
 
 ### Scope
 
@@ -30,9 +48,13 @@ It intentionally does not define:
 - Domain-specific content models
 - Business process semantics beyond message transport
 
-### Status
+### How to Read This Guide
 
-Draft (CI Build)
+- **[Home](index.html)**: Introduction and overview (this page)
+- **[Architecture](architecture.html)**: Detailed architectural model and design principles
+- **[Workflow](workflow.html)**: Message flows, interaction patterns, and operational semantics
+- **[Terminology](terminology.html)**: Messaging channel code systems, ValueSets, and ConceptMaps
+- **[Artifacts](artifacts.html)**: FHIR profiles, extensions, ValueSets, and CodeSystems defined in this guide
 
 ### FHIR Version Compatibility
 

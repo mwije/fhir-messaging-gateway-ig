@@ -11,7 +11,7 @@ Description: "Defines how the gateway executes delivery attempts across candidat
 * #sequential "Sequential"
   "The gateway SHALL attempt delivery across compatible channels sequentially until success or exhaustion."
 
-* #broadcast "Broadcast"
+* #multicast "Multicast"
   "The gateway SHALL deliver the message to all compatible channels."
 
 

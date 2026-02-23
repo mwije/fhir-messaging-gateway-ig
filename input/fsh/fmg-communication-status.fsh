@@ -1,5 +1,4 @@
 ValueSet: FMGInboundCommunicationStatusVS
-Id: fmg-inbound-communication-status
 Title: "FMG Inbound Communication Status"
 Description: "Permitted status values for inbound messages"
 
