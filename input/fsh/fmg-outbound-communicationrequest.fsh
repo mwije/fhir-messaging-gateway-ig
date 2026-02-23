@@ -16,4 +16,4 @@ Description: "Outgoing Message"
 * status from FMGOutboundCommunicationRequestStatusVS (required)
 
 * medium from FMGMessagingChannelVS (extensible)
-* extension contains FMGDeliveryPolicy named fmgDeliveryPolicy 1..1
+* extension contains FMGDeliveryPolicy named fmgDeliveryPolicy 0..1
