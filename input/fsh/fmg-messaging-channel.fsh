@@ -1,6 +1,5 @@
 CodeSystem: FMGMessagingChannelCS
 Title: "Messaging Channel"
-Status: active
 Content: complete
 Description: "Messaging channels supported by the FMG messaging gateway, including traditional and app-based platforms."
 
@@ -39,7 +38,6 @@ Description: "Messaging channels supported by the FMG messaging gateway, includi
 ValueSet: FMGMessagingChannelVS
 Title: "Messaging Channel ValueSet"
 Id: FMGMessagingChannelVS
-Status: active
 Description: "All messaging channels supported by the FMG messaging gateway."
 * include codes from system FMGMessagingChannelCS
 

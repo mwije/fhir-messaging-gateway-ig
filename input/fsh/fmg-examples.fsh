@@ -1,6 +1,6 @@
 
 Instance: ExamplePatientWhatsApp
-InstanceOf: FMGMessagingPatient
+InstanceOf: FMGPatient
 Usage: #example
 Title: "Patient with WhatsApp Contact"
 Description: "Demonstrates ContactPoint.system = other with messaging channel extension"
@@ -18,7 +18,7 @@ Description: "Demonstrates ContactPoint.system = other with messaging channel ex
 * telecom[0].extension[0].valueCode = #whatsapp
 
 Instance: ExamplePatientSMS
-InstanceOf: FMGMessagingPatient
+InstanceOf: FMGPatient
 Usage: #example
 Title: "Patient with SMS Contact"
 
