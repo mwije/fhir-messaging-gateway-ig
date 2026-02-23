@@ -1,4 +1,5 @@
 CodeSystem: FMGDeliveryMode
+Id: FMGDeliveryMode
 Title: "FMG Delivery Mode"
 Description: "Defines how the gateway executes delivery attempts across candidate channels."
 * ^status = #active
@@ -23,6 +24,7 @@ Description: "Allowed execution modes for the FMG messaging gateway."
 
 
 CodeSystem: FMGChannelSelectionPolicy
+Id: FMGChannelSelectionPolicy
 * #requested-only "Requested Only"
 * #allow-substitution "Allow Substitution"
 

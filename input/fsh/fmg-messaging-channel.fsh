@@ -1,4 +1,5 @@
 CodeSystem: FMGMessagingChannelCS
+Id: FMGMessagingChannelCS
 Title: "Messaging Channel"
 Description: "Messaging channels supported by the FMG messaging gateway, including traditional and app-based platforms."
 
@@ -15,28 +16,27 @@ Description: "Messaging channels supported by the FMG messaging gateway, includi
 * signal "Signal" "Signal messaging platform."
 * facebook-messenger "Facebook Messenger" "Meta messaging platform."
 * apple-imessage "Apple iMessage" "Apple iMessage platform."
-* ms-team "Microsoft Teams Chat" "Microsoft Teams messaging platform."
+* ms-teams "Microsoft Teams Chat" "Microsoft Teams messaging platform."
 * slack "Slack" "Slack messaging platform."
 
 // Optional properties for future-proofing
-* ^property[0].code = "async"
-* ^property[0].type = boolean
+* ^property[0].code = #async
+* ^property[0].type = #boolean
 * ^property[0].description = "Indicates asynchronous communication channel."
-* ^property[1].code = "requires-msisdn"
-* ^property[1].type = boolean
+* ^property[1].code = #requires-msisdn
+* ^property[1].type = #boolean
 * ^property[1].description = "Indicates the channel requires a phone number to reach the recipient."
-* ^property[2].code = "supports-media"
-* ^property[2].type = boolean
-* ^property[2].description = "Indicates the channel supports multimedia messages."\
-* ^property[3].code = "secure"
-* ^property[3].type = boolean
+* ^property[2].code = #supports-media
+* ^property[2].type = #boolean
+* ^property[2].description = "Indicates the channel supports multimedia messages."
+* ^property[3].code = #secure
+* ^property[3].type = #boolean
 * ^property[3].description = "Indicates whether the channel is end-to-end encrypted or HIPAA-compliant."
 
 
 // Full valueset
 ValueSet: FMGMessagingChannelVS
 Title: "Messaging Channel ValueSet"
-Id: FMGMessagingChannelVS
 Description: "All messaging channels supported by the FMG messaging gateway."
 * include codes from system FMGMessagingChannelCS
 
@@ -44,8 +44,8 @@ Description: "All messaging channels supported by the FMG messaging gateway."
 // Mapping with HL7 FHIR ParticipationMode CS
 Instance: FMGParticipationModeToMessagingChannel
 InstanceOf: ConceptMap
+Usage: #definition
 Title: "Map v3 ParticipationMode to FMG Messaging Channels"
-Id: FMGParticipationModeToMessagingChannel
 
 Description: "Maps HL7 v3 ParticipationMode codes to FMG messaging channel codes where semantically appropriate."
 
@@ -91,8 +91,8 @@ Description: "Maps HL7 v3 ParticipationMode codes to FMG messaging channel codes
 // Mapping with HL7 FHIR contact-point-system CS
 Instance: FMGContactPointSystemToMessagingChannel
 InstanceOf: ConceptMap
+Usage: #definition
 Title: "Map FHIR contact-point-system to FMG Messaging Channels"
-Id: FMGContactPointSystemToMessagingChannel
 Description: "Maps FHIR contact-point-system codes to FMG transport-level messaging channels."
 
 * group[0].source = "http://hl7.org/fhir/contact-point-system"
